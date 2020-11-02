@@ -35,7 +35,7 @@ See the classroom instruction and code comments for more details on each of thes
 
 ## Results
 <img src="images/feature_matching.png"/>
-In order to quickly collect benchmark data, I created `benchmark_test.cpp`, which is a modified version of `MidTermProject_Camera_Student.cpp` that loops through all possible combinations of detector/descriptor and generates a csv file `experiment.csv`.
+In order to quickly collect benchmark data, I created benchmark_test.cpp, which is a modified version of MidTermProject_Camera_Student.cpp that loops through all possible combinations of detector/descriptor and generates a csv file experiment.csv.
 
 Both number of keypoints and matches (inside the vehicle ROI region) can be found in experiement.csv for each detector/descriptor combination, along with their performance. Based on the benchmark, three detector/descriptor combinations that have the best performance are: FAST+ORB, FAST+BRIEF, ORB+BRIEF.
 
