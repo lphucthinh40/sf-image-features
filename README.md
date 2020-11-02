@@ -32,3 +32,19 @@ See the classroom instruction and code comments for more details on each of thes
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./2D_feature_tracking`.
+
+## Results
+<img src="images/feature_matching.png"/>
+In order to quickly collect benchmark data, I created `benchmark_test.cpp`, which is a modified version of `MidTermProject_Camera_Student.cpp` that loops through all possible combinations of detector/descriptor and generates a csv file `experiment.csv`.
+
+Both number of keypoints and matches (inside the vehicle ROI region) can be found in experiement.csv for each detector/descriptor combination, along with their performance. Based on the benchmark, three detector/descriptor combinations that have the best performance are: FAST+ORB, FAST+BRIEF, ORB+BRIEF.
+
+
+| DETECTOR | DESCRIPTOR | KEYPOINT FOUND | MATCH FOUND | DETECTOR SPEED (ms) | DESCRIPTOR SPEED (ms) |
+|----------|------------|----------------|-------------|---------------------|-----------------------|
+| FAST     | BRIEF      | 149            | 110         | 0.966               | 0.487                 |
+| FAST     | ORB        | 149            | 100         | 0.966               | 1.300                 |
+| ORB      | BRIEF      | 116            | 61          | 5.4                 | 0.396                 |
+
+
+

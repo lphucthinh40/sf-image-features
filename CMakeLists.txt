@@ -16,3 +16,6 @@ add_definitions(${OpenCV_DEFINITIONS})
 # Executable for create matrix exercise
 add_executable (2D_feature_tracking src/matching2D_Student.cpp src/MidTermProject_Camera_Student.cpp)
 target_link_libraries (2D_feature_tracking ${OpenCV_LIBRARIES})
+
+add_executable (benchmark_test src/matching2D_Student.cpp src/benchmark_test.cpp)
+target_link_libraries (benchmark_test ${OpenCV_LIBRARIES})
